@@ -1,0 +1,160 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>BookStoreAppTest</groupId>
+  <artifactId>BookStoreAppTest</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>BookStoreAppTest</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+	   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+        <maven-checkstyle-plugin.version>3.5.0</maven-checkstyle-plugin.version>
+        <testng.version>7.10.2</testng.version>
+        <restassured.version>5.4.0</restassured.version>
+        <extentreports.version>5.1.2</extentreports.version>
+        <apache-poi.version>5.3.0</apache-poi.version>
+        <json-simple.version>1.1.1</json-simple.version>
+        <owner.version>1.0.12</owner.version>
+        <lombok.version>1.18.34</lombok.version>
+        <unirest-java.version>1.4.9</unirest-java.version>
+        <commons-io.version>2.16.1</commons-io.version>
+        <wiremock-jre8-standalone.version>3.0.1</wiremock-jre8-standalone.version>
+        <gson.version>2.10</gson.version>
+        <jackson-databind.version>2.17.0</jackson-databind.version>
+        <assertj.version>3.26.3</assertj.version>
+        <javafaker.version>1.0.2</javafaker.version>
+        <scribejava-apis.version>8.3.3</scribejava-apis.version>
+        <log4j.version>2.23.1</log4j.version>
+        <poiji.version>4.5.0</poiji.version>
+        <codestyle.version>1.1.0</codestyle.version>
+        <checkstyle.version>10.14.1</checkstyle.version>
+        <checkstyle.config>checkstyle/checkstyle.xml</checkstyle.config>
+        <checkstyle.suppress>checkstyle/checkstyle-suppressions.xml</checkstyle.suppress>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.5.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.10.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>7.16.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.11</version>
+		    <scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>7.16.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.17.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy -->
+		<dependency>
+			<groupId>org.codehaus.groovy</groupId>
+			<artifactId>groovy</artifactId>
+			<version>3.0.21</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>maven-cucumber-reporting</artifactId>
+			<version>5.7.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.github.javafaker</groupId>
+		    <artifactId>javafaker</artifactId>
+		    <version>1.0.2</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- Maven Cucumber Reporting Plugin -->
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>5.7.0</version>
+				<executions>
+					<execution>
+						<id>generate-report</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>Cucumber Project</projectName>
+							<outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
+							<jsonFiles>
+								<jsonFile>${project.build.directory}/cucumber-reports/Cucumber.json</jsonFile>
+							</jsonFiles>
+							<reportTargetDirectory>${project.build.directory}/cucumber-reports</reportTargetDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
