@@ -5,7 +5,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 /* 
  * This class is used to check for 
- * Running the Test cases
+ * Running the Test cases.
 */
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features", // add the stepdefinition file
