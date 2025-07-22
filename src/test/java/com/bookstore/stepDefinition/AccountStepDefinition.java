@@ -1,11 +1,14 @@
 package com.bookstore.stepDefinition;
-
+//import the Package
 import com.bookstore.services.AddNewUser;
 import com.bookstore.services.AuthorizeUser;
 import com.bookstore.services.GenerateToken;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
+/* 
+ * This stepdefinition class is used to
+ * map the featurefile with stepdefinition method
+*/
 public class AccountStepDefinition {
 	AddNewUser addNewUser = new AddNewUser();
 	GenerateToken generateToken = new GenerateToken();

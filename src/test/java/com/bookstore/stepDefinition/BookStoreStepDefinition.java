@@ -1,12 +1,15 @@
 package com.bookstore.stepDefinition;
-
+//import the Package
 import com.bookstore.services.AssignNewBook;
 import com.bookstore.services.DeleteBook;
 import com.bookstore.services.GetAllBooks;
 import com.bookstore.services.UpdateBook;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
+/* 
+ * This stepdefinition class is used to
+ * map the featurefile with stepdefinition method
+*/
 public class BookStoreStepDefinition {
 
     GetAllBooks getAllBooks = new GetAllBooks();
