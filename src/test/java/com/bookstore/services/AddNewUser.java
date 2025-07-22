@@ -16,8 +16,9 @@ public class AddNewUser extends Globals {
     public void addNewUser() {
     	logger.info("User need to verify for the Add new User");
     	System.out.println("User need to verify for the Add new User");
-        username = "singhamcooler@gmail.com";
-        password = "PassW0rd@123";;
+        username = "singham"+numGen()+"@gmail.com";
+        password = "PassW0rd@123";
+        System.out.println("#####" + username + " " + password);
         Map<String, Object> bodyMap = new HashMap<>();
         bodyMap.put("userName", username);
         bodyMap.put("password", password);

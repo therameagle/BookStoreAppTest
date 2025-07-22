@@ -13,8 +13,7 @@ public class UpdateBook extends Globals {
 	public void updateBook() {
 		logger.info("User need to verify for the Update the existing book");
 		System.out.println("User need to verify for the Update the existing book");
-		String body = "{\n" + "  \"userId\": \"" + userId + "\",\n" + "  \"isbn\": \"" + isbnNumbers.get(1) + "\"\n"
-				+ "}";
+		String body = "{ \"userId\":" + userId + "," + "  \"isbn\": \"" + isbnNumbers.get(1) + "}";
 		response = RestAssured.given()
 				.contentType(ContentType.JSON)
 				.accept(ContentType.JSON)

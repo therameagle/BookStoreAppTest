@@ -15,13 +15,13 @@ public class Globals {
 
 	public static Response response;
 	public static List<String> isbnNumbers;
-	public static String username = "pro"+numGen()+"@gmail.com";
-	public static String password = "pass"+numGen();
+	public static String username;
+	public static String password ;
 	public static String userId;
 	public static String token;
 	protected static final Logger logger = LogManager.getLogger();
 
-	static String numGen() {
+	public static String numGen() {
 		Random random = new Random();
 		String numbers = "1234567890";
 		return String.valueOf(random.nextInt(numbers.length()));

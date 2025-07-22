@@ -17,9 +17,9 @@ Feature: BookStore Flow
     When Authorize User
     Then Validate that the user is authorized
 
- # Scenario: User need to verify for the Assign a new book to the user
-  #  When Assign a new book to the user
-   # Then Validate that the book is assigned to the user
+#  Scenario: User need to verify for the Assign a new book to the user
+#    When Assign a new book to the user
+#    Then Validate that the book is assigned to the user
 
   Scenario: User need to verify for the Update the existing book
     When Update the existing book

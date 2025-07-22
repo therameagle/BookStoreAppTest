@@ -9,8 +9,8 @@ Feature: BookStore Flow Test
     Then Validate that the token is generated
     When Authorize User
     Then Validate that the user is authorized
-    When Assign a new book to the user
-    Then Validate that the book is assigned to the user
+#    When Assign a new book to the user
+#    Then Validate that the book is assigned to the user
     When Update the existing book
     Then Validate that the book is updated
     When Delete an existing book

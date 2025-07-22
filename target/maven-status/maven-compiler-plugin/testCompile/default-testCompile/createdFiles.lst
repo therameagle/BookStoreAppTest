@@ -1,0 +1,12 @@
+com\bookstore\services\AddNewUser.class
+com\bookstore\stepDefinition\BookStoreStepDefinition.class
+com\bookstore\services\AuthorizeUser.class
+com\bookstore\services\GetAllBooks.class
+com\bookstore\runners\CucumberRunner.class
+com\bookstore\stepDefinition\AccountStepDefinition.class
+com\bookstore\services\AssignNewBook.class
+com\bookstore\services\GenerateToken.class
+com\bookstore\services\DeleteBook.class
+com\bookstore\stepDefinition\Hooks.class
+com\bookstore\services\UpdateBook.class
+com\bookstore\utilities\Globals.class
